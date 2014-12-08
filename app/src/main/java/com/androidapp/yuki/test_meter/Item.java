@@ -5,6 +5,9 @@ package com.androidapp.yuki.test_meter;
  */
 public class Item {
     public String Id;
-    public String Text;
+    public String Birthday;
     public String Step;
+    public String Gender;
+    public String Text;
+
 }

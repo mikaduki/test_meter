@@ -9,9 +9,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/pushfacebookButton"
-        android:src="@android:drawable/ic_menu_set_as"
+        android:src="@android:drawable/ic_menu_upload"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:contentDescription=""
+        android:onClick="pushfacebook_onClick" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -19,73 +21,69 @@
         android:id="@+id/optionButton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:src="@android:drawable/ic_input_add" />
-
-    <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:id="@+id/">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
-            android:id="@+id/textView"
-            android:layout_toEndOf="@+id/Birthday"
-            android:layout_below="@+id/username"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal|bottom" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
-            android:id="@+id/Birthday"
-            android:layout_below="@+id/username"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="right|bottom" />
-
-        <TextView
-            android:layout_width="227dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
-            android:id="@+id/username"
-            android:layout_toEndOf="@+id/pushfacebookButton"
-            android:textSize="30dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="right|center_vertical" />
-
-    </FrameLayout>
+        android:src="@android:drawable/ic_input_add"
+        android:onClick="option_onClick" />
 
     <ImageView
         android:layout_width="260dp"
         android:layout_height="340dp"
-        android:id="@+id/imageView"
+        android:id="@+id/mainimageView"
         android:layout_above="@+id/pushfacebookButton"
         android:layout_alignParentStart="true"
         android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Birthday"
+        android:id="@+id/birthday"
+        android:layout_gravity="right|bottom"
+        android:layout_toStartOf="@+id/gender"
+        android:layout_toEndOf="@+id/profileimageView"
+        android:layout_below="@+id/username2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="User Name"
+        android:id="@+id/username2"
+        android:layout_toEndOf="@+id/profileimageView"
+        android:textSize="30dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_alignTop="@+id/profileimageView"
+        android:layout_alignParentEnd="true" />
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listView"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_above="@+id/optionButton" />
+        android:layout_alignTop="@+id/mainimageView"
+        android:layout_toEndOf="@+id/mainimageView"
+        android:layout_above="@+id/optionButton"
+        android:fastScrollEnabled="false" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/imageView2"
+        android:id="@+id/profileimageView"
         android:layout_gravity="left|top"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/mainimageView"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Gender"
+        android:id="@+id/gender"
+        android:layout_toEndOf="@+id/mainimageView"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_toStartOf="@+id/optionButton"
+        android:layout_below="@+id/username2"
+        android:layout_alignBottom="@+id/birthday"
+        android:layout_alignEnd="@+id/username2" />
 
 </RelativeLayout>

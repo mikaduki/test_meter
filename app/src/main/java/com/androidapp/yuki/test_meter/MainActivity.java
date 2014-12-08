@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.ServiceFilterResponse;
@@ -14,6 +15,7 @@ import java.net.MalformedURLException;
 
 public class MainActivity extends Activity {
     private MobileServiceClient mClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +42,12 @@ public class MainActivity extends Activity {
                 }
             }
         });
+
     }
+    public void pushfacebook_onClick(View view){
+
+    }
+
 
 
     @Override
@@ -64,6 +71,8 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
 
 
