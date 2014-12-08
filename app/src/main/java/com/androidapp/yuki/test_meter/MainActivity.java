@@ -48,7 +48,9 @@ public class MainActivity extends Activity {
 
     }
 
+    public void option_onClick(View view){
 
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
