@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        
         try {
             mClient = new MobileServiceClient(
                     "https://loginapp.azure-mobile.net/",
@@ -47,6 +47,8 @@ public class MainActivity extends Activity {
     public void pushfacebook_onClick(View view){
 
     }
+
+
 
     public void option_onClick(View view){
 
